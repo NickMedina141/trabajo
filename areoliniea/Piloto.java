@@ -1,8 +1,18 @@
 package areoliniea;
 
-public class Piloto extends Personal {
+public class Piloto{
+    private double sueldoPiloto;
     
-    public Piloto(double sueldo){
-        super(sueldo);
+    public Piloto(double sueldoPiloto) {
+        this.sueldoPiloto = sueldoPiloto;
     }
+
+    public double getSueldoPiloto() {
+        return sueldoPiloto;
+    }
+
+    public void setSueldoPiloto(double sueldoPiloto) {
+        this.sueldoPiloto = sueldoPiloto;
+    }
+    
 }

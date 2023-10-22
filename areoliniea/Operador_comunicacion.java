@@ -1,9 +1,20 @@
 package areoliniea;
 
-public class Operador_comunicacion extends Personal{
+public class Operador_comunicacion {
     
-    public Operador_comunicacion(double sueldo){
-        super(sueldo);
+    private double sueldoOperador;
+    
+    public Operador_comunicacion(double sueldoOperador) {
+        this.sueldoOperador = sueldoOperador;
     }
+
+    public double getSueldoOperador() {
+        return sueldoOperador;
+    }
+
+    public void setSueldoOperador(double sueldoOperador) {
+        this.sueldoOperador = sueldoOperador;
+    }
+    
     
 }

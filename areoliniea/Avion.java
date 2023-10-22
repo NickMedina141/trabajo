@@ -8,7 +8,8 @@ public class Avion {
     private String tipo;
     private double cantidadPasajeros;
     private String estado;
-    // llevara objetos de los tripulantes?
+    private ArrayList<Pasajero> pasajeros;
+
     
     public Avion(String id, String tipo, double cantidadPasajeros, String estado) {
         this.id = id;
@@ -48,5 +49,44 @@ public class Avion {
     public void setEstado(String estado) {
         this.estado = estado;
     }
+    
+    //metodos
+    
+    public void agregar(Pasajero pasa1){
+        pasajeros.add(pasa1);
+    }
+    
+    // fallo aqui
+    public void buscaInformacion(String id,int silla){
+        for(Pasajero pasa1: pasajeros){
+           if(pasa1.getSilla() == silla){
+               System.out.println("hola");
+           }
+        }
+    }
+
+    public ArrayList<Pasajero> getPasajeros() {
+        return pasajeros;
+    }
+        
+    
+    
+    public void reservar(int silla,Pasajero pasajero1){
+    if (pasajeros.get(silla) != null){
+        System.out.println("Lo lamentamos pero la silla que desea esta ocupada");
+    }
+    else{
+        pasajeros.set(silla,pasajero1);
+        System.out.println("Se ha registrado su asiento señor pasajero");
+         }
+    }
+
+    @Override
+    public String toString() {
+        return "Informacion del avion: "+"\nid: "+id+"\ntipo: "+tipo+"\ncantidad de Pasajeros abordo: "+cantidadPasajeros+
+                "\nestado del avion: "+estado;
+    }
+    
+    
     
 }

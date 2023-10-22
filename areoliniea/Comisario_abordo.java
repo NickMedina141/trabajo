@@ -1,11 +1,22 @@
 
 package areoliniea;
 
-public class Comisario_abordo extends Personal{
+public class Comisario_abordo{
     
-    public Comisario_abordo(double sueldo){
-        super(sueldo);
+    private double sueldoComisario;
+    
+    public Comisario_abordo(double sueldoComisario) {
+        this.sueldoComisario = sueldoComisario;
     }
+
+    public double getSueldoComisario() {
+        return sueldoComisario;
+    }
+
+    public void setSueldoComisario(double sueldoComisario) {
+        this.sueldoComisario = sueldoComisario;
+    }
+    
     
     
 
