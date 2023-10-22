@@ -2,7 +2,8 @@ package areoliniea;
 
 public class Areopuerto {
     public static void main(String[] args) {
-        Avion avion1 = new Avion("E01A", "boing 343", 25, "activo");
+        Pasajero pasajero1 = new Pasajero(5, "nicolas", 15);
+        Avion avion1 = new Avion("E01A", "boing 343", 25, "activo",pasajero1);
         Piloto piloto1 = new Piloto(60000);
         Piloto piloto2 = new Piloto(70000);
         Operador_comunicacion operadorC1 = new Operador_comunicacion(50000);
@@ -14,7 +15,7 @@ public class Areopuerto {
         Vuelos vuelo1 = new Vuelos("vuelo01","30/04/2023", "aguachia", "curumani", avion1,tripulacionAvion);
         
         
-        Pasajero pasajero1 = new Pasajero(5, "nicolas", 15);
+        
         avion1.agregar(pasajero1);
         System.out.println("La silla del pasajero es: "+pasajero1.getSilla());
         vuelo1.reservarSilla("E01A");

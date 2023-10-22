@@ -8,19 +8,20 @@ public class Avion {
     private String tipo;
     private double cantidadPasajeros;
     private String estado;
+    private Pasajero pasajero1;
     private ArrayList<Pasajero> pasajeros;
-
     
-    public Avion(String id, String tipo, double cantidadPasajeros, String estado) {
+    public Avion(String id, String tipo, double cantidadPasajeros, String estado,Pasajero pasajero1) {
         this.id = id;
         this.tipo = tipo;
         this.cantidadPasajeros = cantidadPasajeros;
         this.estado = estado;
+        this.pasajero1 = pasajero1;
         pasajeros = new ArrayList();
         pasajeros.ensureCapacity(30);
-//        for (int i=0; i< 30;i++){
-//            pasajeros.add(i,null);
-//        }
+        for (int i=0; i< 30;i++){
+            pasajeros.add(i,null);
+        }
     }
 
     public String getId() {
@@ -76,7 +77,7 @@ public class Avion {
         
     
     
-    public void reservar(int silla,Pasajero pasajero1){
+    public void reservar(int silla){
     if (pasajeros.get(silla) != null){
         System.out.println("Lo lamentamos pero la silla que desea esta ocupada");
     }

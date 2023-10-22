@@ -12,7 +12,7 @@ public class Vuelos {
     private ArrayList<Tripulacion> tripulacion;
     private Tripulacion tripulacionAvion;
     private Avion aviones;
-    private Pasajero pasajero1;
+
     
 
     public Vuelos(String id, String fechaVuelo, String ciudadOrigen, String ciudadDestino,Avion aviones,Tripulacion tripulacionAvion) {
@@ -78,10 +78,10 @@ public class Vuelos {
 //    }
 
     public void reservarSilla(String id){
-        if (aviones.getId().equals(id)){
+        if (aviones.getId() == id){
             System.out.print("Ingrese el asiento que desea reservar: ");
             int silla = entrada.nextInt();
-                aviones.reservar(silla,pasajero1);  
+                aviones.reservar(silla);  
         }
         else{
             System.out.println("Lo lamentamos señor pasajero pero el avion que usted desea no existe ");
