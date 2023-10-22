@@ -16,6 +16,11 @@ public class Avion {
         this.tipo = tipo;
         this.cantidadPasajeros = cantidadPasajeros;
         this.estado = estado;
+        pasajeros = new ArrayList();
+        pasajeros.ensureCapacity(30);
+//        for (int i=0; i< 30;i++){
+//            pasajeros.add(i,null);
+//        }
     }
 
     public String getId() {
