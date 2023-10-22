@@ -78,7 +78,7 @@ public class Vuelos {
 //    }
 
     public void reservarSilla(String id){
-        if (aviones.getId() == id){
+        if (aviones.getId().equals(id)){
             System.out.print("Ingrese el asiento que desea reservar: ");
             int silla = entrada.nextInt();
                 aviones.reservar(silla);  
